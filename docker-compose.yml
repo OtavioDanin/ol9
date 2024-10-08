@@ -1,0 +1,13 @@
+services:
+  ol9-hyper:
+    container_name: ol9-hyper
+    build:
+      context: .
+    volumes:
+      - ./:/opt/applications
+    ports:
+      - 9501:9501
+      - 443:443
+    stdin_open: true
+    tty: true 
+    restart: always
